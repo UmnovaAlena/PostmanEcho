@@ -13,13 +13,13 @@ public class PostmanEchoTest {
 // Предусловия
         given()
                 .baseUri("https://postman-echo.com")
-                .body("Good day") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("Привет") // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
                 .when()
                 .post("/post")
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("Good day"));
+                .body("data", equalTo("Привет"));
     }
 }
